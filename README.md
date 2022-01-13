@@ -1,16 +1,18 @@
-# CloudSEK SDE Task Using Django,Rest Framework
-	- It consists the actual implementation of consumer_queue
-    - It works on threading
-    - It handles mutiple clients
-    - Celery is overkill for this mini task
-    - New payload can be added to consumer queue
-    - This implementation creates Thread to compute answer for payload in consumer queue without any delay as it works on threading
-    - Computes answer and insert it into database for every 10 seconds.
+# CloudSEK SDE Task
+###### Using Django and Django Rest Framework
 
-### Handles Mutiple clients at the same time
-### followed PEP-8 Standard    
-### All cases are handled
-### can use docker
+	> It consists the actual implementation of consumer_queue
+    > It works on threading
+    > It handles mutiple clients
+    > Celery is overkill for this mini task
+    > New payload can be added to consumer queue
+    > This implementation creates Thread to compute answer for payload in consumer queue without any delay as it works on threading
+    > Computes answer and insert it into database for every 10 seconds.
+
+- Handles Mutiple clients at the same time
+- followed PEP-8 Standard    
+- All cases are handled
+- can use docker
 
 ## clone the repository using
 
