@@ -54,8 +54,9 @@ class addTask(Thread):
                 # computer answer and add into database using unique_identifier
                 dbInstance = db.objects.get(
                     pk=payload.get("unique_identifier"))
-                dbInstance.answer = payload.get(
-                    "number1") + payload.get("number2")
+                dbInstance.number1 = payload.get("number1")
+                dbInstance.number2 = payload.get("number2")
+                dbInstance.answer = dbInstance.number1 + dbInstance.number2
                 dbInstance.save()
                 # debugging
                 print(str(dbInstance.pk)+" Task Finished")
