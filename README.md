@@ -60,40 +60,51 @@ py -m venv nameOfenvfolder
 ![](\Images\routes.png)
 
 ### AdditonData Model which has number1 number2 and answer as fields
+
 ![](\Images\datamodel.png)
 
 
 ### Route("/") API Endpoint
 
--  / -- index shows successful message  
+-  **_/_ -- index shows successful message**
+
 ![](/Images/index.png)
 
--  consumer queue starts listenig to new tasks in background to reduce delay
+-  **consumer queue starts listenig to new tasks in background to reduce delay**
+
 ![](/Images/consumerQueue.png)
 
 ### Route("/calculate/number1/number2") GET API Endpoint
 
--  calculate/number1/number2/  -- creates payload {number1,number2,unique_identifier}    
+-  **_calculate/number1/number2/_  -- creates payload {number1,number2,unique_
+identifier}**    
+
 ![](/Images/calculate.png)
+
 ![](/Images/tasksadded.png)
+
 ![](/Images/calculate2.png)
 
 -  creates database entry for each new request to this end point
 
 ### Route("/get_answer/identifier")
--  get_answer/identifier/ ------- (get response for identifier) 
+
+-  **_get_answer/identifier/_ ------- (get response for identifier)** 
 
 ### Three Cases:
 
--  "identifier does not exist"  
+-  **"status : 404 --- _identifier does not exist_"** 
+
 ![](/Images/case1.png)
 
--  "answer was not computed still in queue yet and shows message please wait"
+-  **status : 200 --- _answer was not computed still in queue yet and shows message please wait_**
+
 ![](/Images/case2.png)
 
--  "shows the calculated answer"
+-  **status : 200 --- _shows the calculated answer_**
+
 ![](/Images/case3.png)
 
 ### Finished tasks in background by consumer queue thread
-![](/Images/finishedtaks.png)
+![](/Images/finishedtasks.png)
 ![](/Images/tasksadded2.png)
