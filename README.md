@@ -1,7 +1,7 @@
 # CloudSEK SDE Task
 ###### Using Django and Django Rest Framework
 
-	> It consists the actual implementation of consumer_queue
+    > It consists the actual implementation of consumer_queue
     > It works on threading
     > It handles mutiple clients
     > Celery is overkill for this mini task
@@ -20,10 +20,7 @@
 $ git clone "https://github.com/Shyamvegi/cloudSEK.git"
 ```
 
-
-### set path to project folder
-
-## Make and enter a virtaul env  
+## create and activate a virtaul env  
 
 ```sh
 py -m venv nameOfenvfolder
@@ -57,27 +54,27 @@ py -m venv nameOfenvfolder
 ## API END-PONTS  
   
 @http://localhost:8000
+
 ![](/Images/routes.png)
 
-### AdditonData Model which has number1 number2 and answer as fields
+### AdditonData Model
 
 ![](/Images/datamodel.png)
 
 
 ### Route("/") API Endpoint
 
-## **_/_ -- index shows successful message**
+###### **/**
 
 ![](/Images/index.png)
 
--  **consumer queue starts listenig to new tasks in background to reduce delay**
+> **Consumer queue starts listening to new tasks in background to reduce delay**
 
 ![](/Images/consumerQueue.png)
 
-### Route("/calculate/number1/number2") GET API Endpoint
+### Route("/calculate/number1/number2")
 
-## **_calculate/number1/number2/_  -- creates payload {number1,number2,unique_
-identifier}**    
+###### **_calculate/number1/number2/_  -- creates payload {number1,number2,unique_identifier}**    
 
 ![](/Images/calculate.png)
 
@@ -85,11 +82,11 @@ identifier}**
 
 ![](/Images/calculate2.png)
 
--  creates database entry for each new request to this end point
+>  creates database entry for each new request to this end point
 
 ### Route("/get_answer/identifier")
 
-## **_get_answer/identifier/_ ------- (get response for identifier)** 
+###### **_get_answer/identifier/_ ------- (get response for identifier)** 
 
 > Three Cases:
 
