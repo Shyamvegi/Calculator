@@ -66,7 +66,7 @@ py -m venv nameOfenvfolder
 
 ### Route("/") API Endpoint
 
--  **_/_ -- index shows successful message**
+## **_/_ -- index shows successful message**
 
 ![](/Images/index.png)
 
@@ -76,7 +76,7 @@ py -m venv nameOfenvfolder
 
 ### Route("/calculate/number1/number2") GET API Endpoint
 
--  **_calculate/number1/number2/_  -- creates payload {number1,number2,unique_
+## **_calculate/number1/number2/_  -- creates payload {number1,number2,unique_
 identifier}**    
 
 ![](/Images/calculate.png)
@@ -89,9 +89,9 @@ identifier}**
 
 ### Route("/get_answer/identifier")
 
--  **_get_answer/identifier/_ ------- (get response for identifier)** 
+## **_get_answer/identifier/_ ------- (get response for identifier)** 
 
-### Three Cases:
+> Three Cases:
 
 -  **"status : 404 --- _identifier does not exist_"** 
 
