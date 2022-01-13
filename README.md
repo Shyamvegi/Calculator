@@ -51,17 +51,17 @@ py -m venv nameOfenvfolder
 ```sh
 (env)\ python manage.py runserver 
 ```
-![](\Images\initialize.png)
+![](/Images/initialize.png)
 
 
 ## API END-PONTS  
   
 @http://localhost:8000
-![](\Images\routes.png)
+![](/Images/routes.png)
 
 ### AdditonData Model which has number1 number2 and answer as fields
 
-![](\Images\datamodel.png)
+![](/Images/datamodel.png)
 
 
 ### Route("/") API Endpoint
