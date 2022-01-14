@@ -10,11 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
-import environ
 from pathlib import Path
-
-env=environ.ENV()
-environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,13 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("PROJECT_SECRET")
+SECRET_KEY = 'django-insecure-3#5^6__5_2@)^5r+l+*3g)gp(is9@-l1mcm$wggl#s*qd8$%fy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if env('ENV')=="production":
-    DEBUG=True
-else:
-    DEBUG = False
+DEBUG = False
 
 ALLOWED_HOSTS = ['cloudsekapi.herokuapp.com']
 
